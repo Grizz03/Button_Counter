@@ -3,4 +3,6 @@
     <string name="random_picture">Random Picture</string>
     <string name="button">Click me</string>
     <string name="click_me">Click me</string>
+    <string name="enter_note">Enter Note</string>
+    <string name="submit">Submit</string>
 </resources>
