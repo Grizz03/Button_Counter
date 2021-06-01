@@ -3,9 +3,12 @@ package com.example.buttoncounter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+
+private val TAG = "MainActivity"
 
 class MainActivity : AppCompatActivity() {
     // Long way of doing things.
@@ -14,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private var textView: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        Log.d(TAG, "onCreate: called")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.button_counter)
 
@@ -29,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         userInput.setText("")
         // Button onClick
         button.setOnClickListener {
+            Log.d(TAG, "onClick: called")
             textView?.append(userInput.text)
             textView?.append("\n")
             // Clear content of input
